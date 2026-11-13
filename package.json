@@ -1,0 +1,10 @@
+{
+  "name": "note-smart-arplex",
+  "version": "3.0.0",
+  "private": true,
+  "dependencies": {
+    "@capacitor/core": "6.2.2",
+    "@capacitor/cli": "6.2.2",
+    "@capacitor/android": "6.2.2"
+  }
+}

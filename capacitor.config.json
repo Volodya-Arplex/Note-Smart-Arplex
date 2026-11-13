@@ -1,0 +1,8 @@
+{
+  "appId": "com.arplex.notesmart",
+  "appName": "Note Smart Arplex",
+  "webDir": ".",
+  "server": {
+    "androidScheme": "https"
+  }
+}
