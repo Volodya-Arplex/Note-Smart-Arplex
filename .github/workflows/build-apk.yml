@@ -26,6 +26,22 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Prepare web assets
+        run: |
+          mkdir -p www
+          cp index.html www/
+          cp manifest.json www/ 2>/dev/null || true
+          cp icon.png www/ 2>/dev/null || true
+          cat > capacitor.config.json <<'EOF'
+          {
+            "appId": "com.arplex.notesmart",
+            "appName": "Note Smart Arplex",
+            "webDir": "www",
+            "server": { "androidScheme": "https" }
+          }
+          EOF
+          ls -la www/
+
       - name: Add Android platform
         run: npx cap add android
 
